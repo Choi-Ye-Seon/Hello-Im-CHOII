@@ -1,0 +1,124 @@
+/* Fonts */
+@font-face {
+  font-family: 'Bulevar-Regular';
+  src: url('../fonts/Bulevar-Regular.woff') format('woff'),
+   url('../fonts/Bulevar-Regular.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'PretendardVariable';
+  src: url('../fonts/PretendardVariable.woff2') format('woff2'),
+   url('../fonts/PretendardVariable.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'AkiraExpanded';
+  src: url('../fonts/AkiraExpanded.woff2') format('woff2');
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'AkiraExpanded';
+  src: url('../fonts/AkiraExpanded-Bold.woff2') format('woff2');
+  font-weight: 600;
+  font-style: normal;
+}
+
+/* reset(초기화) */
+:root {
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+  cursor: default;
+  line-height: 1.5;
+  font-size: 17px;
+  overflow-wrap: break-word;
+  -moz-tab-size: 4;
+  tab-size: 4;
+  scroll-behavior: auto;
+
+  --color-white: #f5f5f5;
+  --color-black: #030303;
+
+  --akiraexpanded: 'AkiraExpanded', sans-serif;
+  --bulevar: 'Bulevar-Regular', sans-serif;
+  --pretendard: 'PretendardVariable', sans-serif;
+}
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+  color: inherit;
+}
+*,
+:after,
+:before {
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+}
+img,
+picture,
+video,
+canvas {
+  display: block;
+  max-width: 100%;
+  image-rendering: auto;
+}
+svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+  image-rendering: auto;
+}
+canvas {
+  position: relative;
+  top: 0px;
+}
+video{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+button {
+  background: none;
+  border: 0;
+  outline: none;
+  cursor: pointer;
+}
+a {
+  text-decoration: none;
+}
+ul {
+  list-style: none;
+}
+table {
+  border-collapse: collapse;
+}
+
+::selection {
+  background-color: #4f0065;
+}
+
+/* 기본 */
+html.fixed {
+  overflow-y: hidden;
+}
+body {
+  font-family: var(--pretendard);
+  font-size: 1rem;
+  line-height: 1.4;
+  color: var(--color-white);
+  background-color: #000;
+}
+@media (max-width: 767px) {
+  :root {
+    font-size: 16px;
+  }
+}
