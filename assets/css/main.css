@@ -380,6 +380,7 @@
   font-family: var(--bulevar);
   font-size: 4.4706rem;
   font-style: italic;
+  padding-right:1rem;
   white-space: nowrap;
   line-height: 1.2;
 }

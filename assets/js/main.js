@@ -154,65 +154,24 @@ $(document).ready(function () {
 
 
 
-  // Latest Projects (최근 프로젝트)
-  gsap.to('.sc-project .latest-project .project-item:first-child', {
-    scale: 0.8,
-    filter: 'blur(5px)',
-    scrollTrigger: {
-      trigger: '.sc-project .latest-project .project-item:first-child',
-      start: '0% 0%',
-      end: '100% 0%',
-      scrub: 1
-      // markers:true
-    }
-  });
+  // Latest Project (최근 프로젝트)
+  const latestProjectEls = document.querySelectorAll('.sc-project .latest-project .project-item');
 
-  gsap.to('.sc-project .latest-project .project-item:nth-child(2)', {
-    scale: 0.8,
-    filter: 'blur(5px)',
-    scrollTrigger: {
-      trigger: '.sc-project .latest-project .project-item:nth-child(2)',
-      start: '0% 0%',
-      end: '100% 0%',
-      scrub: 1
-      // markers:true
-    }
-  });
+  latestProjectEls.forEach(function(latestProject, index){
+    const latest = gsap.timeline({
+      scrollTrigger:{
+        trigger:latestProject,
+        start:"0% 0%",
+        end:"100% 0%",
+        scrub:1,
+        markers:true
+      }
+    });
 
-  gsap.to('.sc-project .latest-project .project-item:nth-child(3)', {
-    scale: 0.8,
-    filter: 'blur(5px)',
-    scrollTrigger: {
-      trigger: '.sc-project .latest-project .project-item:nth-child(3)',
-      start: '0% 0%',
-      end: '100% 0%',
-      scrub: 1
-      // markers:true
-    }
-  });
+    latest
+    .to(latestProject, { scale: 0.8 },"<")
+    .to(latestProject, { filter: 'blur(5px)'},"<+=.1");
 
-  gsap.to('.sc-project .latest-project .project-item:nth-child(4)', {
-    scale: 0.8,
-    filter: 'blur(5px)',
-    scrollTrigger: {
-      trigger: '.sc-project .latest-project .project-item:nth-child(4)',
-      start: '0% 0%',
-      end: '100% 0%',
-      scrub: 1
-      // markers:true
-    }
-  });
-
-  gsap.to('.sc-project .latest-project .project-item:nth-child(5)', {
-    scale: 0.8,
-    filter: 'blur(5px)',
-    scrollTrigger: {
-      trigger: '.sc-project .latest-project .project-item:nth-child(5)',
-      start: '0% 0%',
-      end: '100% 0%',
-      scrub: 1
-      // markers:true
-    }
   });
 
 
