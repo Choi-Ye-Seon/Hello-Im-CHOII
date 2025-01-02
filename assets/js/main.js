@@ -164,7 +164,7 @@ $(document).ready(function () {
         start:"0% 0%",
         end:"100% 0%",
         scrub:1,
-        markers:true
+        // markers:true
       }
     });
 
