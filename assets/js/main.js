@@ -19,13 +19,11 @@ $(document).ready(function () {
       .to('.intro .keyword', {
         duration: 1,
         text: keyword,
-        // ease: 'power1.inOut'
       })
       if (index < keywords.length - 1) {
         introShow.to('.intro .keyword', {
           duration: 0.5,
           text: '',
-          // ease: 'power1.inOut'
         });
       }
     });
