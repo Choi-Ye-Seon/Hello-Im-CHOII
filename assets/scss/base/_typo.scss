@@ -1,0 +1,28 @@
+/* Fonts */
+@font-face {
+    font-family: 'Bulevar-Regular';
+    src: url('../fonts/Bulevar-Regular.woff') format('woff'),
+     url('../fonts/Bulevar-Regular.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: 'PretendardVariable';
+    src: url('../fonts/PretendardVariable.woff2') format('woff2'),
+     url('../fonts/PretendardVariable.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: 'AkiraExpanded';
+    src: url('../fonts/AkiraExpanded.woff2') format('woff2');
+    font-weight: 300;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: 'AkiraExpanded';
+    src: url('../fonts/AkiraExpanded-Bold.woff2') format('woff2');
+    font-weight: 600;
+    font-style: normal;
+  }
+  

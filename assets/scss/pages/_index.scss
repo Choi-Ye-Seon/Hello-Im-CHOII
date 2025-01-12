@@ -1,0 +1,523 @@
+/* main css */
+/* cursor pointer */
+#cursor {
+  display: flex;
+  position: fixed;
+  align-items: center;
+  justify-content: center;
+  top: 0;
+  left: 0;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  z-index: 100;
+  @include mobile-l {
+    display: none;
+  }
+  .ic-cursor {
+    width: 1rem;
+    height: 1rem;
+    background-color: $color-white;
+    border: 1px solid transparent;
+    border-radius: 100px;
+    opacity: 1;
+    visibility: visible;
+    &.hide {
+      opacity: 0;
+      visibility: hidden;
+    }
+    &.pointer {
+      width: 3rem;
+      height: 3rem;
+      background-color: transparent;
+      border-color: $color-white;
+      transition: 0.4s ease-out;
+    }
+  }
+  .img-box {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s, visibility 0.3s;
+    &.on {
+      opacity: 1;
+      visibility: visible;
+    }
+    .img {
+      width: 0;
+      object-fit: cover;
+      &.on {
+        width: 500px;
+      }
+    }
+  }
+}
+/* intro */
+.intro {
+  position: fixed;
+  inset: 0%;
+  width: 100%;
+  height: 100vh;
+  z-index: 999;
+  background-color: #000;
+  &::before {
+    position: absolute;
+    inset: 0%;
+    content: '';
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.45);
+    z-index: 1;
+  }
+  .cover-title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    transform: translate(-50%, -50%);
+    gap: 0.2rem;
+    z-index: 2;
+    text-align: center;
+    white-space: nowrap;
+    h2 {
+      font-size: 1.5rem;
+    }
+    .text {
+      position: relative;
+      overflow: hidden;
+    }
+  }
+}
+
+/* Hero */
+.sc-hero {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  .title-box .title-inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-transform: uppercase;
+    font-family: $akiraexpanded;
+    font-size: 6.7vw;
+    font-weight: 600;
+    padding: 0 4rem;
+    line-height: 0.8;
+    white-space: nowrap;
+    @include mobile-l {
+      font-size: 9vw;
+    }
+    @include mobile-s {
+      font-size: 1.8125rem;
+    }
+    .text {
+      position: relative;
+      overflow: hidden;
+      span {
+        display: inline-block;
+      }
+    }
+  }
+  .scroll-mark {
+    position: absolute;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+    span {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 4.5rem;
+      height: 3rem;
+      font-size: 15px;
+      border-radius: 100%;
+      border: 1px solid rgba(255, 255, 255, 0.5);
+      animation: bounce 1s infinite ease-in-out;
+    }
+  }
+  .video-box {
+    position: absolute;
+    inset: 0%;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    .video-overlay {
+      background: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0) 0%,
+        rgba(0, 0, 0, 0.5) 85%,
+        rgba(0, 0, 0, 1) 100%
+      );
+    }
+  }
+  @keyframes bounce {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-15px);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+}
+
+/* Works */
+.sc-works {
+  padding-top: 11.7647rem;
+  .group-title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    &::before {
+      content: '';
+      width: 1px;
+      height: 170px;
+      background-color: $color-white;
+    }
+  }
+  .title-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: $akiraexpanded;
+    padding: 2.9412rem 0 4.1176rem;
+    h2 {
+      font-size: 2.9412rem;
+      font-weight: 500;
+      @include mobile-m {
+        font-size: 2.25rem;
+      }
+    }
+    .period {
+      font-size: 1.1765rem;
+      @include mobile-m {
+        font-size: 1rem;
+      }
+    }
+  }
+  .project-item .project-tag {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 5px 1.1765rem;
+    font-size: 0.8824rem;
+    padding-bottom: 2.2rem;
+    color: rgba(255, 255, 255, 0.5);
+    @include mobile-m {
+      font-size: 14px;
+    }
+    span {
+      white-space: nowrap;
+    }
+  }
+  .project-name {
+    font-family: $akiraexpanded;
+    font-size: 2.9412rem;
+    line-height: 1;
+    text-transform: uppercase;
+    padding-bottom: 2.3529rem;
+    text-align: center;
+    @include mobile-l {
+      font-size: 6.52vw;
+    }
+    @include mobile-m {
+      font-size: 7.92vw;
+    }
+    @include mobile-s {
+      font-size: 1.25rem;
+    }
+  }
+  /* marquee*/
+  .works-marquee {
+    padding: 5.88rem 0;
+    overflow: hidden;
+  }
+  .marquee-wrapper {
+    display: flex;
+    position: relative;
+    width: 100%;
+  }
+  .marquee-block {
+    display: flex;
+    align-items: center;
+    min-width: 100%;
+    flex-shrink: 0;
+    animation: marquee 50s infinite linear;
+    animation-direction: reverse;
+    animation-delay: 0;
+  }
+  .marquee-text {
+    display: flex;
+    align-items: center;
+    font-family: $akiraexpanded;
+    font-size: 6.7vw;
+    color: transparent;
+    -webkit-text-stroke: 1px rgba(255, 255, 255, 0.5);
+    text-transform: uppercase;
+    @include mobile-l {
+      font-size: 9vw;
+    }
+    @include mobile-s {
+      font-size: 1.8125rem;
+    }
+    svg {
+      margin: 0 3.6vw;
+      @include mobile-l {
+        margin: 0 7.82vw;
+      }
+      @include mobile-m {
+        width: 30px;
+        height: 30px;
+      }
+      @include mobile-s {
+        margin: 0 30px;
+      }
+    }
+  }
+  @keyframes marquee {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+}
+/* 최근 프로젝트*/
+.sc-works .latest-works .project-item {
+  position: sticky;
+  border-radius: 25px;
+  height: 85vh;
+  top: 40px;
+  margin-bottom: 40px;
+  overflow: hidden;
+  &::before {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.84);
+    z-index: 1;
+  }
+  .info-box {
+    display: flex;
+    position: absolute;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 0 4rem;
+    z-index: 2;
+    @include mobile-l {
+      padding: 0 2rem;
+    }
+  }
+  .project-desc {
+    padding-bottom: 1.1765rem;
+    font-size: 1.1176rem;
+    text-align: center;
+    word-break: keep-all;
+    @include mobile-l {
+      font-size: 1rem;
+    }
+    @include mobile-m {
+      font-size: 15px;
+    }
+  }
+  .project-tag {
+    justify-content: center;
+  }
+  .notice {
+    position: absolute;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    padding: 0 2rem;
+    word-break: keep-all;
+    text-align: center;
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.5);
+    &.pc {
+      display: block;
+      @include mobile-m {
+        display: none;
+      }
+    }
+    &.m {
+      display: none;
+      @include mobile-m {
+        display: block;
+        font-size: 12px;
+      }
+    }
+  }
+  .link-box {
+    display: flex;
+    gap: 15px 30px;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .link-view {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 8px 18px;
+    border-radius: 100px;
+    font-size: 0.8824rem;
+    background-color: $color-white;
+    color: $color-black;
+    transition: 0.3s;
+    @include mobile-m {
+      font-size: 14px;
+    }
+    &:hover {
+      background-color: $color-black;
+      color: $color-white;
+    }
+  }
+}
+/* 실무 프로젝트 */
+.sc-works .career-works {
+  padding-top: 5.8824rem;
+  .project-list {
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
+    counter-reset: number;
+  }
+  .project-item {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+    .project-tag {
+      justify-content: flex-start;
+      padding-bottom: 0;
+    }
+  }
+  .link-project {
+    position: relative;
+    display: block;
+    padding: 82px 30px 94px 130px;
+    counter-increment: number;
+    transition: padding 0.3s;
+    @include mobile-l {
+      padding-left: 100px;
+    }
+    @include mobile-m {
+      padding-left: 0;
+      padding-right: 0;
+      padding-bottom: 65px;
+    }
+    &:hover {
+      background: linear-gradient(
+        90deg,
+        rgba(255, 255, 255, 0.05) 70%,
+        transparent 100%
+      );
+      padding-left: 110px;
+      @include mobile-l {
+        padding-left: 100px;
+        background: rgba(255, 255, 255, 0.05);
+      }
+      @include mobile-m {
+        padding-left: 0rem;
+      }
+    }
+    &::before {
+      position: absolute;
+      content: '(0' counter(number) ')';
+      top: 95px;
+      left: 50px;
+      transition: left 0.3s;
+      @include mobile-l {
+        left: 35px;
+        top: 92px;
+      }
+      @include mobile-m {
+        left: 0;
+        top: 50px;
+        font-size: 14px;
+      }
+    }
+    &:hover::before {
+      left: 35px;
+      @include mobile-l {
+        left: 35px;
+      }
+      @include mobile-m {
+        left: 0;
+      }
+    }
+  }
+  .info-box {
+    display: flex;
+    flex-direction: column;
+    word-break: keep-all;
+  }
+  .project-name {
+    text-align: left;
+  }
+  .desc {
+    padding-bottom: 1rem;
+    @include mobile-m {
+      font-size: 15px;
+    }
+  }
+}
+
+/* Contact */
+.sc-contact {
+  padding-bottom: 5.88rem;
+  .title-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 4rem;
+    overflow: hidden;
+    @include mobile-l {
+      padding: 0 2rem;
+    }
+    .text {
+      font-family: $akiraexpanded;
+      font-size: 6.7vw;
+      font-weight: 600;
+      line-height: 0.8;
+      white-space: nowrap;
+      @include mobile-l {
+        font-size: 9vw;
+      }
+      @include mobile-s {
+        font-size: 1.8125rem;
+      }
+    }
+  }
+  .comment {
+    padding: 2.9412rem 4rem 0;
+    font-size: 1.1176rem;
+    line-height: 1.4;
+    text-align: center;
+    word-break: keep-all;
+    @include mobile-l {
+      padding: 2.9412rem 2rem 0;
+    }
+    @include mobile-m {
+      font-size: 1rem;
+    }
+  }
+}

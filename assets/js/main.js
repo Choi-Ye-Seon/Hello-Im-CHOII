@@ -1,53 +1,58 @@
 $(document).ready(function () {
+  // lenis 스크롤
+  const lenis = new Lenis();
+  lenis.on('scroll', ScrollTrigger.update);
+  gsap.ticker.add((time) => {
+    lenis.raf(time * 1000);
+  });
 
-    // Intro
-    gsap.set('.intro .text h2, .intro .text h3', {yPercent: 100});
+  gsap.ticker.lagSmoothing(0);
 
-    const introShow = gsap.timeline({
-      onComplete:function(){
-        $('html').removeClass('fixed');
-        heroMotions();
-      }
+  lenis.stop();
+
+
+
+  // Intro
+  gsap.set('.intro .text h2, .intro .text h3', {yPercent: 100});
+
+  const introShow = gsap.timeline({
+    onComplete: function () {
+      $('html').removeClass('fixed');
+      heroMotions();
+      lenis.start();
+    }
+  });
+
+  introShow.to('.intro .text h2, .intro .text h3', 0.8, {yPercent: 0, delay: 0.6});
+
+  // Intro / keyword (타이핑효과)
+  const keywords = ['CHOII', 'Publisher', 'Flexible'];
+  keywords.forEach(function (keyword, index) {
+    introShow.to('.intro .keyword', {
+      duration: 1,
+      text: keyword
     });
-    introShow
-    .to('.intro .text h2, .intro .text h3', 0.8, { yPercent: 0 , delay:.6});
-  
-    // Intro / keyword (타이핑효과)
-    const keywords = ['CHOII', 'Publisher', 'Flexible'];
-    keywords.forEach(function(keyword, index){
-      introShow
-      .to('.intro .keyword', {
-        duration: 1,
-        text: keyword,
-      })
-      if (index < keywords.length - 1) {
-        introShow.to('.intro .keyword', {
-          duration: 0.5,
-          text: '',
-        });
-      }
-    });
-  
-    introShow
-    .to('.intro',.7,{yPercent:-100, display:"none"})
-    .to('.intro .cover-title',.2, { autoAlpha:0 },"<+=0.1");
+    if (index < keywords.length - 1) {
+      introShow.to('.intro .keyword', {
+        duration: 0.5,
+        text: ''
+      });
+    }
+  });
+
+  introShow.to('.intro', 0.7, {yPercent: -100, display: 'none'}).to('.intro .cover-title', 0.2, {autoAlpha: 0}, '<+=0.1');
 
 
 
-    // Hero 
-    gsap.set('.sc-hero .title-box .text span', { yPercent: 100 });
-    gsap.set('.scroll-mark', { autoAlpha: 0, scale: 0.1 });
-    gsap.set('#header', { autoAlpha: 0 });
+  // Hero
+  gsap.set('.sc-hero .title-box .text span', {yPercent: 100});
+  gsap.set('.scroll-mark', {autoAlpha: 0, scale: 0.1});
+  gsap.set('#header', {autoAlpha: 0});
 
-    function heroMotions(){
+  function heroMotions() {
     const hero = gsap.timeline();
-    hero
-    .to('#header', 0.8, { autoAlpha: 1 }, '<')
-    .to('.scroll-mark', 0.8, { autoAlpha: 1, scale: 1 }, '<')
-    .to('.sc-hero .title-box .text span', 0.8, { yPercent: 0 }, '<');
+    hero.to('#header', 0.8, {autoAlpha: 1}, '<').to('.scroll-mark', 0.8, {autoAlpha: 1, scale: 1}, '<').to('.sc-hero .title-box .text span', 0.8, {yPercent: 0}, '<');
   }
-    
-
 
 
   // cursor pointer
@@ -87,17 +92,6 @@ $(document).ready(function () {
 
 
 
-  // lenis 스크롤
-  const lenis = new Lenis();
-  lenis.on('scroll', ScrollTrigger.update);
-  gsap.ticker.add((time) => {
-    lenis.raf(time * 1000);
-  });
-
-  gsap.ticker.lagSmoothing(0);
-
-
-
   // top btn
   $('#toTop').click(function () {
     lenis.scrollTo(0, {
@@ -134,12 +128,13 @@ $(document).ready(function () {
   });
 
 
-
   // Header btn-menu / toggleClass
   $('#header .btn-menu').click(function () {
     $('#header').toggleClass('active');
     $('html').toggleClass('fixed');
   });
+
+
 
   // nav click 이동
   $('#header .link-menu').click(function () {
@@ -151,91 +146,75 @@ $(document).ready(function () {
   });
 
 
+  // Latest Works (최근 프로젝트)
+  const latestWorksEls = document.querySelectorAll('.sc-works .latest-works .project-item');
 
-  // Latest Project (최근 프로젝트)
-  const latestProjectEls = document.querySelectorAll('.sc-project .latest-project .project-item');
-
-  latestProjectEls.forEach(function(latestProject, index){
+  latestWorksEls.forEach(function (latestWorks, index) {
     const latest = gsap.timeline({
-      scrollTrigger:{
-        trigger:latestProject,
-        start:"0% 0%",
-        end:"100% 0%",
-        scrub:1,
+      scrollTrigger: {
+        trigger: latestWorks,
+        start: '0% 0%',
+        end: '100% 0%',
+        scrub: 1
         // markers:true
       }
     });
 
     latest
-    .to(latestProject, { scale: 0.8 },"<")
-    .to(latestProject, { filter: 'blur(5px)'},"<+=.1");
-
+    .to(latestWorks, {scale: 0.8}, '<')
+    .to(latestWorks, {filter: 'blur(5px)'}, '<+=.1');
   });
+
 
 
   // Career-Project (실무 프로젝트)
-  let mm = gsap.matchMedia();
+  mediaQuery = window.matchMedia('(min-width: 768px)');
 
-  mm.add('(min-width: 768px)', () => {
-    const triggers = document.querySelectorAll('.sc-project .career-project .trigger');
-
-    triggers.forEach((trigger, index) => {
-      gsap.to(`.sc-project .career-project .trigger:nth-child(${index + 1}) .project-item.active`, {
-        yPercent: -30,
-        scrollTrigger: {
-          trigger: `.sc-project .career-project .trigger:nth-child(${index + 1})`,
-          start: '0% 70%',
-          end: '100% 50%',
-          scrub: 1
-          // markers: true,
-        }
+  function careerThumb(e) {
+    if (e.matches) {
+      // 768px 이상
+      $('.sc-works .career-works .link-project').hover(function () {
+        const career = $(this).data('career');
+        $(career).toggleClass('on');
+        $('#cursor .img-box').toggleClass('on');
+        $('#cursor .ic-cursor').toggleClass('hide');
       });
-    });
+    } else {
+      // 768px 미만일 때 초기화
+      $('.sc-works .career-works .link-project').off('mouseenter mouseleave'); 
+      $('.sc-works .career-works .link-project').each(function () {
+        career = $(this).data('career');
+        $(career).removeClass('on');
+      });
+      $('#cursor .img-box').removeClass('on');
+      $('#cursor .ic-cursor').removeClass('hide');
+    }
+  }
+  mediaQuery.addEventListener('change', careerThumb);
+  careerThumb(mediaQuery);
 
-    return () => {
-      triggerInstances.forEach((instance) => instance.kill());
-      triggerInstances = [];
-
-      gsap.set('.sc-project .career-project .trigger .project-item.active', {yPercent: 0});
-    };
-  });
 
 
   // contact
-  const marquee = gsap.timeline({
+  gsap.set('.sc-contact .title-box .text', {xPercent: 0});
+  const contact = gsap.timeline({
     scrollTrigger: {
-      trigger: '.sc-contact',
-      start: '20% 70%',
-      end: '100% 100%'
-      // markers: true
-    },
-    paused: true,
-    toggleActions: 'play reverse play reverse'
+      trigger: '.sc-contact .video-box',
+      start: '75% 75%',
+      end: '100% 60%',
+      scrub: 1
+      // markers:true
+    }
   });
-  gsap.set('.sc-contact .marquee-wrapper.left .marquee-text', {yPercent: 100});
-  gsap.set('.sc-contact .marquee-wrapper.right .marquee-text', {xPercent: -100, yPercent: 100});
+  contact
+  .from('.sc-contact .title-box .text.first', {xPercent: -170}, '<')
+  .from('.sc-contact .title-box .text.third', {xPercent: 103}, '<');
 
-  marquee
-    .to('.sc-contact .marquee-wrapper.right .marquee-text', {yPercent: 0}, 'show')
-    .to('.sc-contact .marquee-wrapper.left .marquee-text', {yPercent: 0}, 'show')
+  
 
-    .to('.sc-contact .marquee-wrapper.left .marquee-text',12,{
-        xPercent: -104,
-        repeat: -1,
-        ease: 'none'
-      },'slide')
-    .to('.sc-contact .marquee-wrapper.right .marquee-text', 12,{
-        xPercent: -1,
-        repeat: -1,
-        ease: 'none'
-      },'slide');
-
-
-    // thisYear
-    const thisYearEls = document.querySelectorAll('.this-year');
-    thisYearEls.forEach(function (thisYearEl) {
+  // thisYear
+  const thisYearEls = document.querySelectorAll('.this-year');
+  thisYearEls.forEach(function (thisYearEl) {
     thisYearEl.textContent = new Date().getFullYear();
+  });
 });
-
-});
-

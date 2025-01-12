@@ -15,42 +15,76 @@
     <meta property="og:url" content="https://choi-ye-seon.github.io/Hello-Im-CHOII/">
 
     <!-- CSS -->
-<link rel="stylesheet" href="./assets/css/layout.css">
-<link rel="stylesheet" href="./assets/css/main.css">
+    <!-- <link rel="stylesheet" href="./assets/css/layout.css"> -->
+    <!-- <link rel="stylesheet" href="./assets/css/main.css"> -->
+    <link rel="stylesheet" href="./assets/css/style.css">
 
-<!-- jQuery CDN -->
-<script src="https://code.jquery.com/jquery-3.7.1.min.js"
-    integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <!-- jQuery CDN -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
 
-<!-- GSAP CDN -->
-<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/TextPlugin.min.js"></script>
+    <!-- GSAP CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/TextPlugin.min.js"></script>
 
-<!-- Lenis cdn -->
-<script src="https://unpkg.com/lenis@1.1.17/dist/lenis.min.js"></script>
+    <!-- Lenis cdn -->
+    <script src="https://unpkg.com/lenis@1.1.17/dist/lenis.min.js"></script>
 
-<!-- Split Type CDN -->
-<script src="https://unpkg.com/split-type"></script>
+    <!-- Split Type CDN -->
+    <script src="https://unpkg.com/split-type"></script>
 
-<!-- main JS -->
-<script defer src="./assets/js/main.js"></script>
+    <!-- main JS -->
+    <script defer src="./assets/js/main.js"></script>
 
-<!-- Google icon -->
-<link rel="stylesheet"
-    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=arrow_upward" />
+    <!-- Google icon -->
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=arrow_upward" />
 
 </head>
 
 
 <body>
-     <!-- top btn -->
-     <div id="toTop">
-        <span class="material-symbols-outlined">arrow_upward</span>
+    <!-- top btn -->
+    <div id="toTop">
+        <i class="ic-top">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="28" height="28">
+                <g xmlns="http://www.w3.org/2000/svg" id="_01_align_center" data-name="01 align center">
+                    <path
+                        d="M17.707,9.879,13.414,5.586a2,2,0,0,0-2.828,0L6.293,9.879l1.414,1.414L11,8V19h2V8l3.293,3.293Z" />
+                </g>
+            </svg>
+        </i>
     </div>
 
     <!-- cursor -->
-    <div id="cursor"><i class="ic-cursor"></i></div>
+    <div id="cursor">
+        <i class="ic-cursor"></i>
+        <div class="img-box">
+            <div class="img butcher">
+                <img src="./assets/images/butcher.png" alt="정육프랜차이즈 butcher">
+            </div>
+            <div class="img bos">
+                <img src="./assets/images/bos.png" alt="BOS 솔루션">
+            </div>
+            <div class="img league">
+                <img src="./assets/images/league.png" alt="LawFrim League">
+            </div>
+            <div class="img namdo">
+                <img src="./assets/images/namdo.png" alt="남도장터">
+            </div>
+            <div class="img event">
+                <img src="./assets/images/invitation.png" alt="이벤트홈페이지">
+            </div>
+            <div class="img wedding">
+                <img src="./assets/images/wedding.png" alt="웨딩홈페이지">
+            </div>
+            <div class="img obituary">
+                <img src="./assets/images/bugo.png" alt="상조홈페이지">
+            </div>
+
+        </div>
+    </div>
 
     <div class="intro">
         <video loop autoplay muted playsinline>
@@ -87,19 +121,19 @@
                         </div>
                     </a>
                 </li>
-                <li class="menu-item">
+                <!-- <li class="menu-item">
                     <a href="#" class="link-menu" data-target="#about">
                         <div class="text-inner">
                             <span class="text first">about</span>
                             <span class="text second">about</span>
                         </div>
                     </a>
-                </li>
+                </li> -->
                 <li class="menu-item">
-                    <a href="#" class="link-menu" data-target="#project">
+                    <a href="#" class="link-menu" data-target="#works">
                         <div class="text-inner">
-                            <span class="text first">project</span>
-                            <span class="text second">project</span>
+                            <span class="text first">works</span>
+                            <span class="text second">works</span>
                         </div>
                     </a>
                 </li>
@@ -113,9 +147,11 @@
                 </li>
             </ul>
             <div class="menu-bar__footer">
-                <a href="mailto:choii_ii@naver.com" class="link-mail">Want to chat?</a>
+                <h2 class="creator">@ CHOI YE SEON</h2>
                 <ul class="platform-list">
-                    <li class="platform-item"><a href="https://github.com/Choi-Ye-Seon" target="_blank"
+                    <li class="platform-item"><a href="mailto:choii_ii@naver.com" target="_blank"
+                            class="link-platform">Get in touch</a></li>
+                    <li class="platform-item"><a href="https://github.com/Choi-Ye-Seon?tab=repositories" target="_blank"
                             class="link-platform">github</a></li>
                     <li class="platform-item"><a href="https://velog.io/@choii_ii/posts" target="_blank"
                             class="link-platform">velog</a></li>
@@ -148,36 +184,16 @@
         </section>
         <!-- // Hero -->
 
-        <!-- About -->
-        <section class="sc-about" id="about">
+        <!-- Works -->
+        <section class="sc-works" id="works">
             <div class="inner">
-                <div class="video-box">
-                    <div class="video-overlay"></div>
-                    <video autoplay loop muted playsinline poster="./assets/video/about-video-poster.png">
-                        <source src="./assets/video/about-video.mp4" type="video/mp4">
-                    </video>
-                </div>
-                <div class="text-box">
-                    <h2>What Makes Me Happy!</h2>
-                    <p class="comment">
-                        디자인을 코드로 풀어내며 아이디어가 현실이 되는 순간마다 즐거움과 보람을 느낍니다.
-                        <br>이런 경험들이 저를 계속 도전하게 만드는 원동력입니다.
-                        <br>
-                        <br>앞으로도 매일 성장하며, 더 나은 사용자 경험을 만들어가는 웹 퍼블리셔가 되겠습니다.
-                        <br>결과물뿐만 아니라 그 과정에서도 나만의 가치를 더하며, 끊임없이 발전하는 모습을 보여드리겠습니다.
-                    </p>
-                </div>
-            </div>
-        </section>
-        <!-- // About -->
-
-        <!-- Project -->
-        <section class="sc-project" id="project">
-            <div class="inner">
-                <!-- 최근 프로젝트 -->
-                <div class="latest-project">
-                    <div class="title-box">
-                        <h2>Latest Projects <span class="period">(2024)</span></h2>
+                <!-- 최근 작업물 -->
+                <div class="latest-works">
+                    <div class="group-title">
+                        <div class="title-box">
+                            <span class="period">2024</span>
+                            <h2>Works</h2>
+                        </div>
                     </div>
                     <div class="project-list">
                         <!-- 네이버 -->
@@ -186,7 +202,10 @@
                             <div class="info-box">
                                 <h3 class="project-name">Naver</h3>
                                 <p class="project-desc">NAVER 웹사이트를 클론코딩하며 시맨틱 태그와 WAI-ARIA 기법 등을 통해 웹 표준과 웹 접근성을
-                                    향상시켰습니다.</p>
+                                    향상시켰습니다.
+                                </p>
+                                <p class="notice pc">해당 프로젝트는 1440px 해상도의 PC 환경에 최적화되어 있어 PC에서의 이용을 권장드립니다.</p>
+                                <p class="notice m">해당 프로젝트는 PC 환경에서의 이용을 권장드립니다.</p>
                                 <p class="project-tag">
                                     <span>#적응형WEB</span>
                                     <span>#IR·IS·Blind</span>
@@ -207,14 +226,14 @@
                         <div class="project-item">
                             <img src="./assets/images/project-tida.png" alt="티다문구점" class="thumb">
                             <div class="info-box">
-                                <h3 class="project-name">Tida Mungu (cafe24)</h3>
-                                <p class="project-desc">티다문구점 웹사이트를 반응형WEB으로 코딩한 후, 카페24 쇼핑몰 스킨과 연동하였습니다.</p>
+                                <h3 class="project-name">Tida Mungu</h3>
+                                <p class="project-desc">티다문구점 웹사이트를 클론코딩하며 matchMedia를 활용해 반응형으로 구현하였습니다.</p>
                                 <p class="project-tag">
                                     <span>#반응형WEB</span>
                                     <span>#GSAP</span>
                                     <span>#Lottie</span>
                                     <span>#jQuery</span>
-                                    <span>#카페24</span>
+                                    <span>#matchMedia</span>
                                 </p>
                                 <div class="link-box">
                                     <a href="https://choii9901.cafe24.com/skin-skin1" target="_blank"
@@ -232,6 +251,8 @@
                                 <h3 class="project-name">Enterprise Blockchain</h3>
                                 <p class="project-desc">엔터프라이즈 블록체인 웹사이트를 클론코딩하며 GSAP의 ScrollTrigger를 활용해 다양한 전환효과를
                                     구현했습니다.</p>
+                                <p class="notice pc">해당 프로젝트는 1440px 해상도의 PC 환경에 최적화되어 있어 PC에서의 이용을 권장드립니다.</p>
+                                <p class="notice m">해당 프로젝트는 PC 환경에서의 이용을 권장드립니다.</p>
                                 <p class="project-tag">
                                     <span>#적응형WEB</span>
                                     <span>#GSAP</span>
@@ -253,8 +274,10 @@
                             <img src="./assets/images/project-hf11.png" alt="HF-11" class="thumb">
                             <div class="info-box">
                                 <h3 class="project-name">HF-11</h3>
-                                <p class="project-desc">HF-11 웹사이트를 클론코딩하며 반복문과 setTimeout 함수 등 바닐라 JS를 활용해 정교한 인터렉션을
+                                <p class="project-desc">HF-11 웹사이트를 클론코딩하며 반복문과 setTimeout 함수 등 바닐라 JS를 활용해 정교한 동적효과를
                                     구현했습니다.</p>
+                                <p class="notice pc">해당 프로젝트는 1440px 해상도의 PC 환경에 최적화되어 있어 PC에서의 이용을 권장드립니다.</p>
+                                <p class="notice m">해당 프로젝트는 PC 환경에서의 이용을 권장드립니다.</p>
                                 <p class="project-tag">
                                     <span>#적응형WEB</span>
                                     <span>#GSAP</span>
@@ -277,8 +300,11 @@
                             <img src="./assets/images/project-heavn.png" alt="heavn-one" class="thumb">
                             <div class="info-box">
                                 <h3 class="project-name">Heavn-one</h3>
-                                <p class="project-desc">Heavn-one 웹사이트를 클론코딩하며 이미지 시퀀스 애니메이션과 모션을 단계적으로 분리하여 섬세한 인터렉션을
-                                    구현했습니다.</p>
+                                <p class="project-desc">Heavn-one 웹사이트를 클론코딩하며 Lottie 라이브러리를 활용해 JSON 기반의 이미지 시퀀스 애니메이션을
+                                    구현했습니다.
+                                </p>
+                                <p class="notice pc">해당 프로젝트는 1440px 해상도의 PC 환경에 최적화되어 있어 PC에서의 이용을 권장드립니다.</p>
+                                <p class="notice m">해당 프로젝트는 PC 환경에서의 이용을 권장드립니다.</p>
                                 <p class="project-tag">
                                     <span>#적응형WEB</span>
                                     <span>#GSAP</span>
@@ -300,8 +326,8 @@
                             <img src="./assets/images/project-koffiracha.png" alt="koffiracha hot sauce" class="thumb">
                             <div class="info-box">
                                 <h3 class="project-name">Koffiracha Hot Sauce</h3>
-                                <p class="project-desc">Koffiracha Hot Sauce 웹사이트를 클론코딩하며, matchMedia를 활용한 스크립트 기반 미디어
-                                    쿼리로 반응형 웹을 구현했습니다.</p>
+                                <p class="project-desc">Koffiracha Hot Sauce 웹사이트를 클론코딩하며 여러 장의 이미지를 최적화하여 로드하고 canvas로
+                                    렌더링하여 부드러운 애니메이션을 구현했습니다.</p>
                                 <p class="project-tag">
                                     <span>#반응형WEB</span>
                                     <span>#GSAP</span>
@@ -318,152 +344,374 @@
                             </div>
                         </div>
                         <!-- // Koffiracha Hot Sauce -->
-
                     </div>
                 </div>
                 <!-- // 최근 프로젝트 -->
 
                 <!-- 실무 프로젝트 -->
-                <div class="career-project">
-                    <div class="title-box">
-                        <h2>More & See All My Portfolio <span class="period">(2022 - 2024)</span></h2>
+                <div class="career-works">
+                    <div class="group-title">
+                        <div class="title-box">
+                            <span class="period">2022~</span>
+                            <h2>Career</h2>
+                        </div>
                     </div>
-                    <div class="project-list">
-                        <div class="grid-row01 trigger">
-                            <!-- butcher -->
-                            <a href="https://butcher-sigma.vercel.app/" target="_blank" class="project-item">
-                                <img src="./assets/images/butcher.png" alt="정육프랜차이즈 홈페이지" class="thumb">
-                                <span class="info-box">
-                                    <span class="project-name">Franchise Homepage</span>
-                                    <span class="type">반응형 WEB</span>
-                                </span>
+                    <ul class="project-list">
+                        <!-- butcher -->
+                        <li class="project-item">
+                            <a href="https://butcher-sigma.vercel.app/" target="_blank" class="link-project"
+                                data-career=".butcher">
+                                <div class="info-box">
+                                    <span class="project-name">BUTCHER</span>
+                                    <span class="desc">
+                                        과도한 동적 요소와 복잡한 콘텐츠 배치로 인한 사용자 경험 저하 문제를 개선하고, 브랜드
+                                        아이덴티티를 효과적으로 전달하는 데 집중했습니다.
+                                    </span>
+                                    <p class="project-tag">
+                                        <span>#개인프로젝트</span>
+                                        <span>#정육프랜차이즈</span>
+                                        <span>#반응형</span>
+                                        <span>#퍼블리싱 100%</span>
+                                        <span>#바닐라JS</span>
+                                    </p>
+                                </div>
                             </a>
-                            <!-- bos솔루션 -->
-                            <a href="https://bos-pi.vercel.app/" target="_blank" class="project-item mt120 active">
-                                <img src="./assets/images/bos.png" alt="BOS 솔루션" class="thumb">
-                                <span class="info-box">
+                        </li>
+                        <!-- bos솔루션 -->
+                        <li class="project-item">
+                            <a href="https://bos-pi.vercel.app/" target="_blank" class="link-project"
+                                data-career=".bos">
+                                <div class="info-box">
                                     <span class="project-name">BOS Solution</span>
-                                    <span class="type">반응형 WEB</span>
-                                </span>
+                                    <span class="desc">
+                                        리뉴얼 초기 버전에서 미흡했던 브랜드 가치를 강화하고, 적응형 웹의 한계를 극복하기 위해 반응형 웹으로 재구축했습니다.
+                                    </span>
+                                    <p class="project-tag">
+                                        <span>#개인프로젝트</span>
+                                        <span>#반응형</span>
+                                        <span>#메인리뉴얼</span>
+                                        <span>#기획 100%</span>
+                                        <span>#퍼블리싱 100%</span>
+                                    </p>
+                                </div>
                             </a>
-                        </div>
-                        <div class="grid-row02 trigger">
-                            <!-- 법률사무소 리그 -->
-                            <a href="https://lawfirm-league.vercel.app/" target="_blank"
-                                class="project-item mt120 active">
-                                <img src="./assets/images/league.png" alt="법률사무소 리그" class="thumb">
-                                <span class="info-box">
+                        </li>
+                        <!-- 법률사무소 리그 -->
+                        <li class="project-item">
+                            <a href="https://lawfirm-league.vercel.app/" target="_blank" class="link-project"
+                                data-career=".league">
+                                <div class="info-box">
                                     <span class="project-name">LawFrim League</span>
-                                    <span class="type">반응형 WEB</span>
-                                </span>
+                                    <span class="desc">
+                                        전반적인 UX/UI 리뉴얼을 통해 사용성을 개선하고, iOS 호환성 문제를 해결하여 동영상 배너의 호환성을 향상시킨 프로젝트입니다.
+                                    </span>
+                                    <p class="project-tag">
+                                        <span>#개인프로젝트</span>
+                                        <span>#법률사이트</span>
+                                        <span>#반응형</span>
+                                        <span>#iOS호환</span>
+                                        <span>#기획+퍼블리싱 100%</span>
+                                    </p>
+                                </div>
                             </a>
-                            <!-- 남도장터 -->
-                            <a href="https://jnmall.kr/" target="_blank" class="project-item">
-                                <img src="./assets/images/namdo.png" alt="남도장터" class="thumb">
-                                <span class="info-box">
+                        </li>
+                        <!-- 남도장터 -->
+                        <li class="project-item">
+                            <a href="https://jnmall.kr/" target="_blank" class="link-project" data-career=".namdo">
+                                <div class="info-box">
                                     <span class="project-name">Namdo Mall</span>
-                                    <span class="type">적응형 WEB</span>
-                                </span>
+                                    <span class="desc">
+                                        전라남도 지역경제 쇼핑몰 리뉴얼 작업에서 메인 페이지와 고객센터 게시판의 맞춤 퍼블리싱을 담당했습니다. </span>
+                                    <p class="project-tag">
+                                        <span>#실무프로젝트</span>
+                                        <span>#남도장터</span>
+                                        <span>#적응형</span>
+                                        <span>#BOS솔루션기반</span>
+                                        <span>#퍼블리싱 100%</span>
+                                    </p>
+                                </div>
                             </a>
-                        </div>
-                        <div class="grid-row01 trigger">
-                            <!-- 모바일 초대장 -->
-                            <a href="https://invitation.bbiz.kr" target="_blank" class="project-item ">
-                                <img src="./assets/images/invitation.png" alt="모바일 초대장" class="thumb">
-                                <span class="info-box">
-                                    <span class="project-name">Invitation Card</span>
-                                    <span class="type">적응형 WEB</span>
-                                </span>
+                        </li>
+                        <!-- 모바일 초대장 -->
+                        <li class="project-item">
+                            <a href="https://invitation.bbiz.kr/" target="_blank" class="link-project"
+                                data-career=".event">
+                                <div class="info-box">
+                                    <span class="project-name">Event Homepage</span>
+                                    <span class="desc">
+                                        게시판 기반의 모바일 카드 템플릿을 제작한 후, 초대장 기능에 특화된 홈페이지를 구축했습니다.
+                                    </span>
+                                    <p class="project-tag">
+                                        <span>#실무프로젝트</span>
+                                        <span>#모바일초대장</span>
+                                        <span>#적응형</span>
+                                        <span>#BOS솔루션기반</span>
+                                        <span>#기획+퍼블리싱 100%</span>
+                                    </p>
+                                </div>
                             </a>
-                            <!-- 모바일 청첩장 -->
-                            <a href="https://wedding.bbiz.kr" target="_blank" class="project-item mt120 active">
-                                <img src="./assets/images/wedding.png" alt="모바일 청첩장" class="thumb">
-                                <span class="info-box">
-                                    <span class="project-name">Wedding Card</span>
-                                    <span class="type">적응형 WEB</span>
-                                </span>
+                        </li>
+                        <!-- 모바일 청첩장 -->
+                        <li class="project-item">
+                            <a href="https://wedding.bbiz.kr/" target="_blank" class="link-project"
+                                data-career=".wedding">
+                                <div class="info-box">
+                                    <span class="project-name">Wedding Homepage</span>
+                                    <span class="desc">
+                                        게시판 기반의 모바일 카드 템플릿을 제작한 후, 청첩장 기능에 특화된 홈페이지를 구축했습니다.
+                                    </span>
+                                    <p class="project-tag">
+                                        <span>#실무프로젝트</span>
+                                        <span>#모바일청첩장</span>
+                                        <span>#적응형</span>
+                                        <span>#BOS솔루션기반</span>
+                                        <span>#기획+퍼블리싱 100%</span>
+                                    </p>
+                                </div>
                             </a>
-
-                        </div>
-                        <div class="grid-row02 trigger">
-                            <!-- 모바일 부고장 -->
-                            <a href="https://obituary01.bbiz.kr/" target="_blank" class="project-item mt120 active">
-                                <img src="./assets/images/bugo.png" alt="모바일 부고장" class="thumb">
-                                <span class="info-box">
-                                    <span class="project-name">LawFrim League</span>
-                                    <span class="type">적응형 WEB</span>
-                                </span>
+                        </li>
+                        <!-- 모바일 부고장 -->
+                        <li class="project-item">
+                            <a href="https://obituary01.bbiz.kr/" target="_blank" class="link-project"
+                                data-career=".obituary">
+                                <div class="info-box">
+                                    <span class="project-name">Obituary Homepage</span>
+                                    <span class="desc">
+                                        게시판 기반의 모바일 카드 템플릿을 제작한 후, 부고장 기능에 특화된 홈페이지를 구축했습니다.
+                                    </span>
+                                    <p class="project-tag">
+                                        <span>#실무프로젝트</span>
+                                        <span>#모바일부고장</span>
+                                        <span>#적응형</span>
+                                        <span>#BOS솔루션기반</span>
+                                        <span>#기획+퍼블리싱 100%</span>
+                                    </p>
+                                </div>
                             </a>
-                            <!-- 관공서 템플릿 -->
-                            <a href="http://office09.bbiz.kr/" target="_blank" class="project-item">
-                                <img src="./assets/images/office09.png" alt="관공서홈페이지" class="thumb">
-                                <span class="info-box">
-                                    <span class="project-name">Office Homepage</span>
-                                    <span class="type">적응형 WEB</span>
-                                </span>
-                            </a>
-                        </div>
-                    </div>
+                        </li>
+                    </ul>
                 </div>
                 <!-- // 실무 프로젝트 -->
+            </div>
+            <!-- marquee slide -->
+            <div class="works-marquee">
+                <div class="marquee-wrapper">
+                    <div class="marquee-block">
+                        <span class="marquee-text">accessibility
+                            <svg width="48" height="48" viewBox="0 0 48 48" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M11 15H4C2.34315 15 1 16.3431 1 18V30C1 31.6569 2.34315 33 4 33H11"
+                                    stroke="#FFD600" stroke-width="2"></path>
+                                <path d="M15 37V44C15 45.6569 16.3431 47 18 47H30C31.6569 47 33 45.6569 33 44V37"
+                                    stroke="#FFD600" stroke-width="2"></path>
+                                <path d="M15 11V4C15 2.34315 16.3431 1 18 1L30 1C31.6569 1 33 2.34315 33 4V11"
+                                    stroke="#FFD600" stroke-width="2"></path>
+                                <path d="M11 33H12C13.6569 33 15 34.3431 15 36V37" stroke="#FFD600" stroke-width="2">
+                                </path>
+                                <path d="M24 23H18C16.3431 23 15 21.6569 15 20V11" stroke="#FFD600" stroke-width="2">
+                                </path>
+                                <path d="M37 15H36C34.3431 15 33 13.6569 33 12V11" stroke="#FFD600" stroke-width="2">
+                                </path>
+                                <path d="M24 23H30C31.6569 23 33 24.3431 33 26V37" stroke="#FFD600" stroke-width="2">
+                                </path>
+                                <path d="M37 15H44C45.6569 15 47 16.3431 47 18V30C47 31.6569 45.6569 33 44 33H37"
+                                    stroke="#FFD600" stroke-width="2"></path>
+                            </svg>
+                        </span>
+                        <span class="marquee-text">responsiveness
+                            <svg width="48" height="48" viewBox="0 0 48 48" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M11 15H4C2.34315 15 1 16.3431 1 18V30C1 31.6569 2.34315 33 4 33H11"
+                                    stroke="#FFD600" stroke-width="2"></path>
+                                <path d="M15 37V44C15 45.6569 16.3431 47 18 47H30C31.6569 47 33 45.6569 33 44V37"
+                                    stroke="#FFD600" stroke-width="2"></path>
+                                <path d="M15 11V4C15 2.34315 16.3431 1 18 1L30 1C31.6569 1 33 2.34315 33 4V11"
+                                    stroke="#FFD600" stroke-width="2"></path>
+                                <path d="M11 33H12C13.6569 33 15 34.3431 15 36V37" stroke="#FFD600" stroke-width="2">
+                                </path>
+                                <path d="M24 23H18C16.3431 23 15 21.6569 15 20V11" stroke="#FFD600" stroke-width="2">
+                                </path>
+                                <path d="M37 15H36C34.3431 15 33 13.6569 33 12V11" stroke="#FFD600" stroke-width="2">
+                                </path>
+                                <path d="M24 23H30C31.6569 23 33 24.3431 33 26V37" stroke="#FFD600" stroke-width="2">
+                                </path>
+                                <path d="M37 15H44C45.6569 15 47 16.3431 47 18V30C47 31.6569 45.6569 33 44 33H37"
+                                    stroke="#FFD600" stroke-width="2"></path>
+                            </svg>
+                        </span>
+                        <span class="marquee-text">interactive
+                            <svg width="48" height="48" viewBox="0 0 48 48" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M11 15H4C2.34315 15 1 16.3431 1 18V30C1 31.6569 2.34315 33 4 33H11"
+                                    stroke="#FFD600" stroke-width="2"></path>
+                                <path d="M15 37V44C15 45.6569 16.3431 47 18 47H30C31.6569 47 33 45.6569 33 44V37"
+                                    stroke="#FFD600" stroke-width="2"></path>
+                                <path d="M15 11V4C15 2.34315 16.3431 1 18 1L30 1C31.6569 1 33 2.34315 33 4V11"
+                                    stroke="#FFD600" stroke-width="2"></path>
+                                <path d="M11 33H12C13.6569 33 15 34.3431 15 36V37" stroke="#FFD600" stroke-width="2">
+                                </path>
+                                <path d="M24 23H18C16.3431 23 15 21.6569 15 20V11" stroke="#FFD600" stroke-width="2">
+                                </path>
+                                <path d="M37 15H36C34.3431 15 33 13.6569 33 12V11" stroke="#FFD600" stroke-width="2">
+                                </path>
+                                <path d="M24 23H30C31.6569 23 33 24.3431 33 26V37" stroke="#FFD600" stroke-width="2">
+                                </path>
+                                <path d="M37 15H44C45.6569 15 47 16.3431 47 18V30C47 31.6569 45.6569 33 44 33H37"
+                                    stroke="#FFD600" stroke-width="2"></path>
+                            </svg>
+                        </span>
+                        <span class="marquee-text">performance
+                            <svg width="48" height="48" viewBox="0 0 48 48" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M11 15H4C2.34315 15 1 16.3431 1 18V30C1 31.6569 2.34315 33 4 33H11"
+                                    stroke="#FFD600" stroke-width="2"></path>
+                                <path d="M15 37V44C15 45.6569 16.3431 47 18 47H30C31.6569 47 33 45.6569 33 44V37"
+                                    stroke="#FFD600" stroke-width="2"></path>
+                                <path d="M15 11V4C15 2.34315 16.3431 1 18 1L30 1C31.6569 1 33 2.34315 33 4V11"
+                                    stroke="#FFD600" stroke-width="2"></path>
+                                <path d="M11 33H12C13.6569 33 15 34.3431 15 36V37" stroke="#FFD600" stroke-width="2">
+                                </path>
+                                <path d="M24 23H18C16.3431 23 15 21.6569 15 20V11" stroke="#FFD600" stroke-width="2">
+                                </path>
+                                <path d="M37 15H36C34.3431 15 33 13.6569 33 12V11" stroke="#FFD600" stroke-width="2">
+                                </path>
+                                <path d="M24 23H30C31.6569 23 33 24.3431 33 26V37" stroke="#FFD600" stroke-width="2">
+                                </path>
+                                <path d="M37 15H44C45.6569 15 47 16.3431 47 18V30C47 31.6569 45.6569 33 44 33H37"
+                                    stroke="#FFD600" stroke-width="2"></path>
+                            </svg>
+                        </span>
+                    </div>
+                    <div class="marquee-block">
+                        <span class="marquee-text">accessibility
+                            <svg width="48" height="48" viewBox="0 0 48 48" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M11 15H4C2.34315 15 1 16.3431 1 18V30C1 31.6569 2.34315 33 4 33H11"
+                                    stroke="#FFD600" stroke-width="2"></path>
+                                <path d="M15 37V44C15 45.6569 16.3431 47 18 47H30C31.6569 47 33 45.6569 33 44V37"
+                                    stroke="#FFD600" stroke-width="2"></path>
+                                <path d="M15 11V4C15 2.34315 16.3431 1 18 1L30 1C31.6569 1 33 2.34315 33 4V11"
+                                    stroke="#FFD600" stroke-width="2"></path>
+                                <path d="M11 33H12C13.6569 33 15 34.3431 15 36V37" stroke="#FFD600" stroke-width="2">
+                                </path>
+                                <path d="M24 23H18C16.3431 23 15 21.6569 15 20V11" stroke="#FFD600" stroke-width="2">
+                                </path>
+                                <path d="M37 15H36C34.3431 15 33 13.6569 33 12V11" stroke="#FFD600" stroke-width="2">
+                                </path>
+                                <path d="M24 23H30C31.6569 23 33 24.3431 33 26V37" stroke="#FFD600" stroke-width="2">
+                                </path>
+                                <path d="M37 15H44C45.6569 15 47 16.3431 47 18V30C47 31.6569 45.6569 33 44 33H37"
+                                    stroke="#FFD600" stroke-width="2"></path>
+                            </svg>
+                        </span>
+                        <span class="marquee-text">responsiveness
+                            <svg width="48" height="48" viewBox="0 0 48 48" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M11 15H4C2.34315 15 1 16.3431 1 18V30C1 31.6569 2.34315 33 4 33H11"
+                                    stroke="#FFD600" stroke-width="2"></path>
+                                <path d="M15 37V44C15 45.6569 16.3431 47 18 47H30C31.6569 47 33 45.6569 33 44V37"
+                                    stroke="#FFD600" stroke-width="2"></path>
+                                <path d="M15 11V4C15 2.34315 16.3431 1 18 1L30 1C31.6569 1 33 2.34315 33 4V11"
+                                    stroke="#FFD600" stroke-width="2"></path>
+                                <path d="M11 33H12C13.6569 33 15 34.3431 15 36V37" stroke="#FFD600" stroke-width="2">
+                                </path>
+                                <path d="M24 23H18C16.3431 23 15 21.6569 15 20V11" stroke="#FFD600" stroke-width="2">
+                                </path>
+                                <path d="M37 15H36C34.3431 15 33 13.6569 33 12V11" stroke="#FFD600" stroke-width="2">
+                                </path>
+                                <path d="M24 23H30C31.6569 23 33 24.3431 33 26V37" stroke="#FFD600" stroke-width="2">
+                                </path>
+                                <path d="M37 15H44C45.6569 15 47 16.3431 47 18V30C47 31.6569 45.6569 33 44 33H37"
+                                    stroke="#FFD600" stroke-width="2"></path>
+                            </svg>
+                        </span>
+                        <span class="marquee-text">interactive
+                            <svg width="48" height="48" viewBox="0 0 48 48" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M11 15H4C2.34315 15 1 16.3431 1 18V30C1 31.6569 2.34315 33 4 33H11"
+                                    stroke="#FFD600" stroke-width="2"></path>
+                                <path d="M15 37V44C15 45.6569 16.3431 47 18 47H30C31.6569 47 33 45.6569 33 44V37"
+                                    stroke="#FFD600" stroke-width="2"></path>
+                                <path d="M15 11V4C15 2.34315 16.3431 1 18 1L30 1C31.6569 1 33 2.34315 33 4V11"
+                                    stroke="#FFD600" stroke-width="2"></path>
+                                <path d="M11 33H12C13.6569 33 15 34.3431 15 36V37" stroke="#FFD600" stroke-width="2">
+                                </path>
+                                <path d="M24 23H18C16.3431 23 15 21.6569 15 20V11" stroke="#FFD600" stroke-width="2">
+                                </path>
+                                <path d="M37 15H36C34.3431 15 33 13.6569 33 12V11" stroke="#FFD600" stroke-width="2">
+                                </path>
+                                <path d="M24 23H30C31.6569 23 33 24.3431 33 26V37" stroke="#FFD600" stroke-width="2">
+                                </path>
+                                <path d="M37 15H44C45.6569 15 47 16.3431 47 18V30C47 31.6569 45.6569 33 44 33H37"
+                                    stroke="#FFD600" stroke-width="2"></path>
+                            </svg>
+                        </span>
+                        <span class="marquee-text">performance
+                            <svg width="48" height="48" viewBox="0 0 48 48" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M11 15H4C2.34315 15 1 16.3431 1 18V30C1 31.6569 2.34315 33 4 33H11"
+                                    stroke="#FFD600" stroke-width="2"></path>
+                                <path d="M15 37V44C15 45.6569 16.3431 47 18 47H30C31.6569 47 33 45.6569 33 44V37"
+                                    stroke="#FFD600" stroke-width="2"></path>
+                                <path d="M15 11V4C15 2.34315 16.3431 1 18 1L30 1C31.6569 1 33 2.34315 33 4V11"
+                                    stroke="#FFD600" stroke-width="2"></path>
+                                <path d="M11 33H12C13.6569 33 15 34.3431 15 36V37" stroke="#FFD600" stroke-width="2">
+                                </path>
+                                <path d="M24 23H18C16.3431 23 15 21.6569 15 20V11" stroke="#FFD600" stroke-width="2">
+                                </path>
+                                <path d="M37 15H36C34.3431 15 33 13.6569 33 12V11" stroke="#FFD600" stroke-width="2">
+                                </path>
+                                <path d="M24 23H30C31.6569 23 33 24.3431 33 26V37" stroke="#FFD600" stroke-width="2">
+                                </path>
+                                <path d="M37 15H44C45.6569 15 47 16.3431 47 18V30C47 31.6569 45.6569 33 44 33H37"
+                                    stroke="#FFD600" stroke-width="2"></path>
+                            </svg>
+                        </span>
+                    </div>
+                </div>
             </div>
         </section>
         <!-- // Project -->
 
         <!-- Contact -->
         <section class="sc-contact" id="contact">
-            <!-- marquee slide -->
-            <div class="marquee-container">
-                <div class="marquee-wrapper left">
-                    <div class="marquee-block">
-                        <span class="marquee-text">Let's create something awesome together!</span>
-                        <span class="marquee-text">Let's create something awesome together!</span>
-                        <span class="marquee-text">Let's create something awesome together!</span>
-                    </div>
-                </div>
-                <div class="marquee-wrapper right">
-                    <div class="marquee-block">
-                        <span class="marquee-text">Let's create something awesome together!</span>
-                        <span class="marquee-text">Let's create something awesome together!</span>
-                        <span class="marquee-text">Let's create something awesome together!</span>
-                    </div>
-                </div>
-            </div>
-            <!-- // marquee slide -->
-
             <div class="video-box">
                 <div class="video-overlay"></div>
                 <video autoplay loop muted playsinline poster="./assets/video/contact-video-poster.jpg">
                     <source src="./assets/video/contact-video.mp4" type="video/mp4">
                 </video>
             </div>
-
-            <div class="contact-container">
-                <div class="inner">
-                    <h2>Contact</h2>
-                    <p class="comment">
-                        안녕하세요. 퍼블리셔 최예선입니다.
-                        <br>다양한 마크업 사례에 대한 경험을 차곡차곡 쌓아나가고 있습니다.
-                        <br>경험 하나하나에 진심을 담아, 더 나은 웹을 만드는 데 최선을 다하겠습니다.
-                    </p>
-                </div>
+            <div class="title-box">
+                <span class="text first">Let's</span>
+                <span class="text second">Create</span>
+                <span class="text third">A Website</span>
             </div>
+            <p class="comment">
+                다양한 마크업 사례에 대한 경험을 차곡차곡 쌓아나가고 있습니다.
+                <br>경험 하나하나에 진심을 담아, 더 나은 웹을 만드는 데 최선을 다하겠습니다.
+            </p>
         </section>
         <!-- // Contact -->
     </main>
 
     <footer id="footer">
-        <small class="copyright">&copy;<span class="this-year"></span>Choii</small>
-        <a href="mailto:choii_ii@naver.com" class="link-mail">Want to chat?</a>
-        <ul class="platform-list">
-            <li class="platform-item"><a href="https://github.com/Choi-Ye-Seon" target="_blank"
-                    class="link-platform">github</a></li>
-            <li class="platform-item"><a href="https://velog.io/@choii_ii/posts" target="_blank"
-                    class="link-platform">velog</a></li>
-        </ul>
+        <div class="inner">
+            <div class="footer-menu">
+                <h2 class="creator">@ CHOI YE SEON</h2>
+                <ul class="platform-list">
+                    <li class="platform-item"><a href="mailto:choii_ii@naver.com" target="_blank"
+                            class="link-platform">Get in touch</a></li>
+                    <li class="platform-item"><a href="https://github.com/Choi-Ye-Seon?tab=repositories" target="_blank"
+                            class="link-platform">github</a></li>
+                    <li class="platform-item"><a href="https://velog.io/@choii_ii/posts" target="_blank"
+                            class="link-platform">velog</a></li>
+                </ul>
+            </div>
+            <small class="copyright">&copy;<span class="this-year"></span></small>
+        </div>
     </footer>
 
-   
+
 </body>
 
 </html>
