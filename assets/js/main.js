@@ -175,7 +175,7 @@ $('#header h1').click(function(){
 
     latest
     .to(latestWorks, {scale: 0.8}, '<')
-    .to(latestWorks, {filter: 'blur(5px)'}, '<+=.1');
+    .to(latestWorks, {filter: 'blur(5px)'}, '<+=.3');
   });
 
 
