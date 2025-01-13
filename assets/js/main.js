@@ -132,9 +132,21 @@ $(document).ready(function () {
   $('#header .btn-menu').click(function () {
     $('#header').toggleClass('active');
     $('html').toggleClass('fixed');
+
+    if($("#header").hasClass('active')){
+      lenis.stop();
+    }else{
+      lenis.start();
+    }
   });
 
-
+$('#header h1 a').click(function(){
+  if($("#header").hasClass('active')){
+    $("#header").removeClass('active');
+    lenis.start();
+  }
+  console.log('메인으로');
+});
 
   // nav click 이동
   $('#header .link-menu').click(function () {
