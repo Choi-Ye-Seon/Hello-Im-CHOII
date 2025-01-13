@@ -140,7 +140,7 @@ $(document).ready(function () {
     }
   });
 
-$('#header h1 a').click(function(){
+$('#header h1').click(function(){
   if($("#header").hasClass('active')){
     $("#header").removeClass('active');
     lenis.start();
@@ -152,6 +152,7 @@ $('#header h1 a').click(function(){
   $('#header .link-menu').click(function () {
     $('#header').removeClass('active');
     $('html').removeClass('fixed');
+    lenis.start();
 
     const navLink = $(this).data('target');
     lenis.scrollTo(navLink);
