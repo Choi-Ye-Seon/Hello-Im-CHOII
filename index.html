@@ -47,6 +47,7 @@
 <body>
     <!-- top btn -->
     <div id="toTop">
+        <span class="blind">맨 위로</span>
         <i class="ic-top">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="28" height="28">
                 <g xmlns="http://www.w3.org/2000/svg" id="_01_align_center" data-name="01 align center">
@@ -67,8 +68,11 @@
             <div class="img bos">
                 <img src="./assets/images/bos.png" alt="BOS 솔루션">
             </div>
-            <div class="img league">
-                <img src="./assets/images/league.png" alt="LawFrim League">
+            <div class="img hospital">
+                <img src="./assets/images/hospital.png" alt="병원홈페이지">
+            </div>
+            <div class="img estate">
+                <img src="./assets/images/estate.png" alt="분양홈페이지">
             </div>
             <div class="img namdo">
                 <img src="./assets/images/namdo.png" alt="남도장터">
@@ -87,7 +91,7 @@
     </div>
 
     <div class="intro">
-        <video loop autoplay muted playsinline>
+        <video loop autoplay muted playsinline aria-hidden="true">
             <source src="./assets/video/intro-video.mp4" type="video/mp4">
         </video>
         <div class="cover-title">
@@ -117,23 +121,15 @@
                     <a href="#" class="link-menu" data-target="#home">
                         <div class="text-inner">
                             <span class="text first">home</span>
-                            <span class="text second">home</span>
+                            <span class="text second" aria-hidden="true">home</span>
                         </div>
                     </a>
                 </li>
-                <!-- <li class="menu-item">
-                    <a href="#" class="link-menu" data-target="#about">
-                        <div class="text-inner">
-                            <span class="text first">about</span>
-                            <span class="text second">about</span>
-                        </div>
-                    </a>
-                </li> -->
                 <li class="menu-item">
                     <a href="#" class="link-menu" data-target="#works">
                         <div class="text-inner">
                             <span class="text first">works</span>
-                            <span class="text second">works</span>
+                            <span class="text second" aria-hidden="true">works</span>
                         </div>
                     </a>
                 </li>
@@ -141,7 +137,7 @@
                     <a href="#" class="link-menu" data-target="#contact">
                         <div class="text-inner">
                             <span class="text first">contact</span>
-                            <span class="text second">contact</span>
+                            <span class="text second" aria-hidden="true">contact</span>
                         </div>
                     </a>
                 </li>
@@ -175,7 +171,7 @@
             </div>
             <div class="scroll-mark"><span>Scroll</span></div>
 
-            <div class="video-box">
+            <div class="video-box" aria-hidden="true">
                 <div class="video-overlay"></div>
                 <video autoplay loop muted playsinline poster="./assets/video/main-vis-poster.png">
                     <source src="./assets/video/main-vis.mp4" type="video/mp4">
@@ -357,6 +353,119 @@
                         </div>
                     </div>
                     <ul class="project-list">
+                        <!-- 남도장터 -->
+                        <li class="project-item">
+                            <a href="https://jnmall.kr/" target="_blank" class="link-project" data-career=".namdo">
+                                <div class="info-box">
+                                    <span class="project-name">Namdo Mall</span>
+                                    <span class="desc">
+                                        전라남도 지역경제 쇼핑몰 '남도장터' 리뉴얼 작업에서 메인 페이지와 고객센터 게시판의 맞춤 퍼블리싱을 담당했습니다. </span>
+                                    <p class="project-tag">
+                                        <span>#실무프로젝트</span>
+                                        <span>#남도장터</span>
+                                        <span>#적응형</span>
+                                        <span>#BOS솔루션기반</span>
+                                        <span>#퍼블리싱 100%</span>
+                                    </p>
+                                </div>
+                            </a>
+                        </li>
+                        <!-- 모바일 초대장 -->
+                        <li class="project-item">
+                            <a href="https://event01.bbiz.kr/" target="_blank" class="link-project"
+                                data-career=".event">
+                                <div class="info-box">
+                                    <span class="project-name">Event Homepage</span>
+                                    <span class="desc">
+                                        게시판 기반의 '모바일 초대장' 템플릿을 제작한 후, 초대장 기능에 특화된 홈페이지를 구축했습니다.
+                                    </span>
+                                    <p class="project-tag">
+                                        <span>#실무프로젝트</span>
+                                        <span>#모바일초대장</span>
+                                        <span>#적응형</span>
+                                        <span>#BOS솔루션기반</span>
+                                        <span>#기획+퍼블리싱 100%</span>
+                                    </p>
+                                </div>
+                            </a>
+                        </li>
+                        <!-- 모바일 부고장 -->
+                        <li class="project-item">
+                            <a href="https://funeral01.bbiz.kr" target="_blank" class="link-project"
+                                data-career=".obituary">
+                                <div class="info-box">
+                                    <span class="project-name">Obituary Homepage</span>
+                                    <span class="desc">
+                                        게시판 기반의 '모바일 부고장' 템플릿을 제작한 후, 부고장 기능에 특화된 홈페이지를 구축했습니다.
+                                    </span>
+                                    <p class="project-tag">
+                                        <span>#실무프로젝트</span>
+                                        <span>#모바일부고장</span>
+                                        <span>#적응형</span>
+                                        <span>#BOS솔루션기반</span>
+                                        <span>#기획+퍼블리싱 100%</span>
+                                    </p>
+                                </div>
+                            </a>
+                        </li>
+                        <!-- 모바일 청첩장 -->
+                        <li class="project-item">
+                            <a href="https://wedding01.bbiz.kr/" target="_blank" class="link-project"
+                                data-career=".wedding">
+                                <div class="info-box">
+                                    <span class="project-name">Wedding Homepage</span>
+                                    <span class="desc">
+                                        게시판 기반의 '모바일 청첩장' 템플릿을 제작한 후, 청첩장 기능에 특화된 홈페이지를 구축했습니다.
+                                    </span>
+                                    <p class="project-tag">
+                                        <span>#실무프로젝트</span>
+                                        <span>#모바일청첩장</span>
+                                        <span>#적응형</span>
+                                        <span>#BOS솔루션기반</span>
+                                        <span>#기획+퍼블리싱 100%</span>
+                                    </p>
+                                </div>
+                            </a>
+                        </li>
+                        <!-- 병원 홈페이지 -->
+                        <li class="project-item">
+                            <a href="http://hospital10.bbiz.kr" target="_blank" class="link-project"
+                                data-career=".hospital">
+                                <div class="info-box">
+                                    <span class="project-name">HOSPITAL HOMEPAGE</span>
+                                    <span class="desc">
+                                        병원 템플릿은 간결하고 직관적인 마크업으로 사용자 편의를 극대화하며, 다양한 디바이스에서 일관된 사용자 경험을 제공합니다.
+                                    </span>
+                                    <p class="project-tag">
+                                        <span>#실무프로젝트</span>
+                                        <span>#병원템플릿</span>
+                                        <span>#적응형</span>
+                                        <span>#BOS솔루션기반</span>
+                                        <span>#퍼블리싱 100%</span>
+                                    </p>
+                                </div>
+                            </a>
+                        </li>
+                        <!-- 분양 홈페이지 -->
+                        <li class="project-item">
+                            <a href="http://realestate10.bbiz.kr" target="_blank" class="link-project"
+                                data-career=".estate">
+                                <div class="info-box">
+                                    <span class="project-name">ESTATE HOMEPAGE</span>
+                                    <span class="desc">
+                                        부동산/분양 템플릿은 아이콘 사용을 지양하고 가상 요소로 최대한 구현하여, 색상과 크기를 자유롭게 수정할 수 있도록 사용 편의성을 높였습니다.
+                                    </span>
+                                    <p class="project-tag">
+                                        <span>#실무프로젝트</span>
+                                        <span>#분양양템플릿</span>
+                                        <span>#적응형</span>
+                                        <span>#BOS솔루션기반</span>
+                                        <span>#퍼블리싱 100%</span>
+                                    </p>
+                                </div>
+                            </a>
+                        </li>
+
                         <!-- butcher -->
                         <li class="project-item">
                             <a href="https://choi-ye-seon.github.io/butcher/" target="_blank" class="link-project"
@@ -396,98 +505,6 @@
                                 </div>
                             </a>
                         </li>
-                        <!-- 법률사무소 리그 -->
-                        <li class="project-item">
-                            <a href="https://choi-ye-seon.github.io/Lawfirm-League/" target="_blank"
-                                class="link-project" data-career=".league">
-                                <div class="info-box">
-                                    <span class="project-name">LawFrim League</span>
-                                    <span class="desc">
-                                        전반적인 UX/UI 리뉴얼을 통해 사용자 경험을 개선하고, iOS 환경에서 발생하던 동영상 배너의 호환성 문제를 해결했습니다. </span>
-                                    <p class="project-tag">
-                                        <span>#개인프로젝트</span>
-                                        <span>#법률사이트</span>
-                                        <span>#반응형</span>
-                                        <span>#iOS호환</span>
-                                        <span>#기획+퍼블리싱 100%</span>
-                                    </p>
-                                </div>
-                            </a>
-                        </li>
-                        <!-- 남도장터 -->
-                        <li class="project-item">
-                            <a href="https://jnmall.kr/" target="_blank" class="link-project" data-career=".namdo">
-                                <div class="info-box">
-                                    <span class="project-name">Namdo Mall</span>
-                                    <span class="desc">
-                                        전라남도 지역경제 쇼핑몰 리뉴얼 작업에서 메인 페이지와 고객센터 게시판의 맞춤 퍼블리싱을 담당했습니다. </span>
-                                    <p class="project-tag">
-                                        <span>#실무프로젝트</span>
-                                        <span>#남도장터</span>
-                                        <span>#적응형</span>
-                                        <span>#BOS솔루션기반</span>
-                                        <span>#퍼블리싱 100%</span>
-                                    </p>
-                                </div>
-                            </a>
-                        </li>
-                        <!-- 모바일 초대장 -->
-                        <li class="project-item">
-                            <a href="https://invitation.bbiz.kr/" target="_blank" class="link-project"
-                                data-career=".event">
-                                <div class="info-box">
-                                    <span class="project-name">Event Homepage</span>
-                                    <span class="desc">
-                                        게시판 기반의 모바일 카드 템플릿을 제작한 후, 초대장 기능에 특화된 홈페이지를 구축했습니다.
-                                    </span>
-                                    <p class="project-tag">
-                                        <span>#실무프로젝트</span>
-                                        <span>#모바일초대장</span>
-                                        <span>#적응형</span>
-                                        <span>#BOS솔루션기반</span>
-                                        <span>#기획+퍼블리싱 100%</span>
-                                    </p>
-                                </div>
-                            </a>
-                        </li>
-                        <!-- 모바일 청첩장 -->
-                        <li class="project-item">
-                            <a href="https://wedding.bbiz.kr/" target="_blank" class="link-project"
-                                data-career=".wedding">
-                                <div class="info-box">
-                                    <span class="project-name">Wedding Homepage</span>
-                                    <span class="desc">
-                                        게시판 기반의 모바일 카드 템플릿을 제작한 후, 청첩장 기능에 특화된 홈페이지를 구축했습니다.
-                                    </span>
-                                    <p class="project-tag">
-                                        <span>#실무프로젝트</span>
-                                        <span>#모바일청첩장</span>
-                                        <span>#적응형</span>
-                                        <span>#BOS솔루션기반</span>
-                                        <span>#기획+퍼블리싱 100%</span>
-                                    </p>
-                                </div>
-                            </a>
-                        </li>
-                        <!-- 모바일 부고장 -->
-                        <li class="project-item">
-                            <a href="https://obituary01.bbiz.kr/" target="_blank" class="link-project"
-                                data-career=".obituary">
-                                <div class="info-box">
-                                    <span class="project-name">Obituary Homepage</span>
-                                    <span class="desc">
-                                        게시판 기반의 모바일 카드 템플릿을 제작한 후, 부고장 기능에 특화된 홈페이지를 구축했습니다.
-                                    </span>
-                                    <p class="project-tag">
-                                        <span>#실무프로젝트</span>
-                                        <span>#모바일부고장</span>
-                                        <span>#적응형</span>
-                                        <span>#BOS솔루션기반</span>
-                                        <span>#기획+퍼블리싱 100%</span>
-                                    </p>
-                                </div>
-                            </a>
-                        </li>
                     </ul>
                 </div>
                 <!-- // 실무 프로젝트 -->
@@ -498,7 +515,7 @@
                     <div class="marquee-block">
                         <span class="marquee-text">accessibility
                             <svg width="48" height="48" viewBox="0 0 48 48" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
+                                xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                                 <path d="M11 15H4C2.34315 15 1 16.3431 1 18V30C1 31.6569 2.34315 33 4 33H11"
                                     stroke="#FFD600" stroke-width="2"></path>
                                 <path d="M15 37V44C15 45.6569 16.3431 47 18 47H30C31.6569 47 33 45.6569 33 44V37"
@@ -519,7 +536,7 @@
                         </span>
                         <span class="marquee-text">responsiveness
                             <svg width="48" height="48" viewBox="0 0 48 48" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
+                                xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                                 <path d="M11 15H4C2.34315 15 1 16.3431 1 18V30C1 31.6569 2.34315 33 4 33H11"
                                     stroke="#FFD600" stroke-width="2"></path>
                                 <path d="M15 37V44C15 45.6569 16.3431 47 18 47H30C31.6569 47 33 45.6569 33 44V37"
@@ -540,7 +557,7 @@
                         </span>
                         <span class="marquee-text">interactive
                             <svg width="48" height="48" viewBox="0 0 48 48" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
+                                xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                                 <path d="M11 15H4C2.34315 15 1 16.3431 1 18V30C1 31.6569 2.34315 33 4 33H11"
                                     stroke="#FFD600" stroke-width="2"></path>
                                 <path d="M15 37V44C15 45.6569 16.3431 47 18 47H30C31.6569 47 33 45.6569 33 44V37"
@@ -561,7 +578,7 @@
                         </span>
                         <span class="marquee-text">performance
                             <svg width="48" height="48" viewBox="0 0 48 48" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
+                                xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                                 <path d="M11 15H4C2.34315 15 1 16.3431 1 18V30C1 31.6569 2.34315 33 4 33H11"
                                     stroke="#FFD600" stroke-width="2"></path>
                                 <path d="M15 37V44C15 45.6569 16.3431 47 18 47H30C31.6569 47 33 45.6569 33 44V37"
@@ -581,7 +598,7 @@
                             </svg>
                         </span>
                     </div>
-                    <div class="marquee-block">
+                    <div class="marquee-block" aria-hidden="true">
                         <span class="marquee-text">accessibility
                             <svg width="48" height="48" viewBox="0 0 48 48" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
@@ -674,7 +691,8 @@
 
         <!-- Contact -->
         <section class="sc-contact" id="contact">
-            <div class="video-box">
+            <h2 class="blind">contact</h2>
+            <div class="video-box" aria-hidden="true">
                 <div class="video-overlay"></div>
                 <video autoplay loop muted playsinline poster="./assets/video/contact-video-poster.jpg">
                     <source src="./assets/video/contact-video.mp4" type="video/mp4">
