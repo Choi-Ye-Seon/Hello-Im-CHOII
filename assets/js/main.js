@@ -8,51 +8,22 @@ $(document).ready(function () {
 
   gsap.ticker.lagSmoothing(0);
 
-  lenis.stop();
-
-
-
-  // Intro
-  gsap.set('.intro .text h2, .intro .text h3', {yPercent: 100});
-
-  const introShow = gsap.timeline({
-    onComplete: function () {
-      $('html').removeClass('fixed');
-      heroMotions();
-      lenis.start();
-    }
-  });
-
-  introShow.to('.intro .text h2, .intro .text h3', 0.8, {yPercent: 0, delay: 0.6});
-
-  // Intro / keyword (타이핑효과)
-  const keywords = ['CHOII', 'Publisher', 'Flexible'];
-  keywords.forEach(function (keyword, index) {
-    introShow.to('.intro .keyword', {
-      duration: 1,
-      text: keyword
-    });
-    if (index < keywords.length - 1) {
-      introShow.to('.intro .keyword', {
-        duration: 0.5,
-        text: ''
-      });
-    }
-  });
-
-  introShow.to('.intro', 0.7, {yPercent: -100, display: 'none'}).to('.intro .cover-title', 0.2, {autoAlpha: 0}, '<+=0.1');
-
-
-
+  
   // Hero
-  gsap.set('.sc-hero .title-box .text span', {yPercent: 100});
+  gsap.set('.sc-hero',{autoAlpha:0});
+  gsap.set('.sc-hero .title-box .text span', {yPercent: 100, autoAlpha:0});
   gsap.set('.scroll-mark', {autoAlpha: 0, scale: 0.1});
   gsap.set('#header', {autoAlpha: 0});
 
   function heroMotions() {
-    const hero = gsap.timeline();
-    hero.to('#header', 0.8, {autoAlpha: 1}, '<').to('.scroll-mark', 0.8, {autoAlpha: 1, scale: 1}, '<').to('.sc-hero .title-box .text span', 0.8, {yPercent: 0}, '<');
+    const hero = gsap.timeline({delay:0.5});
+    hero
+    .to('.sc-hero',0.1,{autoAlpha:1})
+    .to('#header', 0.8, {autoAlpha: 1}, '<')
+    .to('.scroll-mark', 0.8, {autoAlpha: 1, scale: 1}, '<')
+    .to('.sc-hero .title-box .text span', 0.8, {yPercent: 0, autoAlpha:1}, '<');
   }
+  heroMotions();
 
 
   // cursor pointer
@@ -145,7 +116,6 @@ $('#header h1').click(function(){
     $("#header").removeClass('active');
     lenis.start();
   }
-  console.log('메인으로');
 });
 
   // nav click 이동
